@@ -1,0 +1,33 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=EUC-JP">
+  </head>
+  <body>
+      　wtviewは、重みつき画像ビューワーである。重みは画像を表示した時間と回数で
+      表現される。ただし表示した時間は手動で修正できる。<br>
+      　画像は重みの順にリストされ、更に上位から複数のグループに分割される。各
+       グループから前回表示時刻が最も古いものが取り出されて表示される。これを
+       グループ順に繰り返し、最下位グループまで来たら最上位グループに戻る。<br>
+       　グループの大きさは上位のものほど小さく、下位のものほど大きくなる。従って
+        上位グループに属する画像ほど出現頻度は大きくなる。<br>
+        　マルチセッションに対応しており、同時に複数重みつき画像グループを切り替えて
+         表示できる。<br>
+        　以下のクラスで構成される。
+        <ul>
+            <li>WtView スタートアップモジュール
+            <li>SessionManager 複数セッションの管理
+            <li>SessionContext 単一セッションのコンテキスト
+            <li>ShowStrategy 次に表示する画像の選択
+            <li>WtContainer 画像の重みデータのコンテナ
+            <li>SimpleView 画像表示パネル
+            <li>Register 指定フォルダから重みデータファイルを生成
+        </ul>
+
+  </body>
+</html>
